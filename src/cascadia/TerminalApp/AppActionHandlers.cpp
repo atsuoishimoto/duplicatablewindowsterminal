@@ -928,6 +928,36 @@ namespace winrt::TerminalApp::implementation
     }
 
     // Method Description:
+    // - Opens a new window with a duplicate of the focused pane. Like
+    //   duplicateTab, this carries over the pane's profile and, if the shell
+    //   has told us about it, its working directory.
+    void TerminalPage::_HandleDuplicateWindow(const IInspectable& /*sender*/,
+                                              const ActionEventArgs& args)
+    {
+        // If there's nothing to duplicate (e.g. the settings tab is focused),
+        // the default-constructed args open the default profile.
+        NewTerminalArgs newTerminalArgs{};
+
+        if (const auto tabImpl{ _GetFocusedTabImpl() })
+        {
+            if (auto profile{ tabImpl->GetFocusedProfile() })
+            {
+                profile = GetClosestProfileForDuplicationOfProfile(profile);
+                newTerminalArgs.Profile(::Microsoft::Console::Utils::GuidToString(profile.Guid()));
+
+                const auto workingDirectory = tabImpl->GetActiveTerminalControl().WorkingDirectory();
+                if (::Microsoft::Console::Utils::IsValidDirectory(workingDirectory.c_str()))
+                {
+                    newTerminalArgs.StartingDirectory(workingDirectory);
+                }
+            }
+        }
+
+        _OpenNewWindow(newTerminalArgs);
+        args.Handled(true);
+    }
+
+    // Method Description:
     // - Raise a IdentifyWindowsRequested event. This will bubble up to the
     //   AppLogic, to the AppHost, to the Peasant, to the Monarch, then get
     //   distributed down to _all_ the Peasants, as to display info about the

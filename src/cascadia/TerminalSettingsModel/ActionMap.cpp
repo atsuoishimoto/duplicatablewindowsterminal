@@ -89,6 +89,7 @@ namespace winrt::Microsoft::Terminal::Settings::Model::implementation
                 { ShortcutAction::DisplayWorkingDirectory, USES_RESOURCE(L"DisplayWorkingDirectoryCommandKey") },
                 { ShortcutAction::DisablePaneReadOnly, USES_RESOURCE(L"DisablePaneReadOnlyCommandKey") },
                 { ShortcutAction::DuplicateTab, USES_RESOURCE(L"DuplicateTabCommandKey") },
+                { ShortcutAction::DuplicateWindow, USES_RESOURCE(L"DuplicateWindowCommandKey") },
                 { ShortcutAction::EnablePaneReadOnly, USES_RESOURCE(L"EnablePaneReadOnlyCommandKey") },
                 { ShortcutAction::ExecuteCommandline, USES_RESOURCE(L"ExecuteCommandlineCommandKey") },
                 { ShortcutAction::ExportBuffer, USES_RESOURCE(L"ExportBuffer") },

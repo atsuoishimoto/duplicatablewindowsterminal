@@ -81,6 +81,7 @@
     ON_ALL_ACTIONS(DisablePaneReadOnly)     \
     ON_ALL_ACTIONS(FindMatch)               \
     ON_ALL_ACTIONS(NewWindow)               \
+    ON_ALL_ACTIONS(DuplicateWindow)         \
     ON_ALL_ACTIONS(IdentifyWindow)          \
     ON_ALL_ACTIONS(IdentifyWindows)         \
     ON_ALL_ACTIONS(RenameWindow)            \
