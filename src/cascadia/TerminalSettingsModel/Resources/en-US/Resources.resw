@@ -234,6 +234,9 @@
   <data name="DuplicateTabCommandKey" xml:space="preserve">
     <value>Duplicate tab</value>
   </data>
+  <data name="DuplicateWindowCommandKey" xml:space="preserve">
+    <value>Duplicate window</value>
+  </data>
   <data name="ExecuteCommandlineCommandKey" xml:space="preserve">
     <value>Run commandline "{0}" in this window</value>
     <comment>{0} will be replaced with a user-defined commandline</comment>

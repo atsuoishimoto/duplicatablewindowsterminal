@@ -70,6 +70,7 @@ static constexpr std::string_view TogglePaneReadOnlyKey{ "toggleReadOnlyMode" };
 static constexpr std::string_view EnablePaneReadOnlyKey{ "enableReadOnlyMode" };
 static constexpr std::string_view DisablePaneReadOnlyKey{ "disableReadOnlyMode" };
 static constexpr std::string_view NewWindowKey{ "newWindow" };
+static constexpr std::string_view DuplicateWindowKey{ "duplicateWindow" };
 static constexpr std::string_view IdentifyWindowKey{ "identifyWindow" };
 static constexpr std::string_view IdentifyWindowsKey{ "identifyWindows" };
 static constexpr std::string_view RenameWindowKey{ "renameWindow" };

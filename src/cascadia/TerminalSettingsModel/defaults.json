@@ -553,6 +553,7 @@
         { "command": { "action" : "moveTab", "direction": "backward" }, "id": "Terminal.MoveTabBackward" },
         { "command": "newTab", "id": "Terminal.OpenNewTab" },
         { "command": "newWindow", "id": "Terminal.OpenNewWindow" },
+        { "command": "duplicateWindow", "id": "Terminal.DuplicateWindow" },
         { "command": { "action": "newTab", "index": 0 }, "id": "Terminal.OpenNewTabProfile0" },
         { "command": { "action": "newTab", "index": 1 }, "id": "Terminal.OpenNewTabProfile1" },
         { "command": { "action": "newTab", "index": 2 }, "id": "Terminal.OpenNewTabProfile2" },
