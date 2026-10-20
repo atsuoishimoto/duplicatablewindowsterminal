@@ -431,6 +431,7 @@
         "commandPalette",
         "copy",
         "duplicateTab",
+        "duplicateWindow",
         "expandSelectionToWord",
         "experimental.colorSelection",
         "exportBuffer",
